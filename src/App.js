@@ -1,5 +1,7 @@
 import './App.css';
-import ExcuseComponent from './components/ExcuseComponent';
+// import AgifyComponent from './components/Agify';
+import CatFactComponent from './components/CatFactComponent';
+// import ExcuseComponent from './components/ExcuseComponent';
 // import SearchUsers from './components/SearchUsers';
 // import DataFetchingComponent from './components/DataFetchingComponent ';
 // import SeasonRadioButtons from './components/SeasonRadioButtons';
@@ -63,7 +65,9 @@ function App() {
         {/* <SeasonRadioButtons /> */}
         {/* <UserFetchingComponent /> */}
         {/* <SearchUsers /> */}
-        <ExcuseComponent />
+        {/* <ExcuseComponent /> */}
+        {/* <AgifyComponent /> */}
+        <CatFactComponent />
       </header>
     </div>
   );
