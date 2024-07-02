@@ -1,0 +1,114 @@
+/* Container for the entire search component */
+.find-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Cera Pro', sans-serif;
+}
+
+/* Header for the search component */
+h1 {
+  text-align: center;
+}
+
+/* Styling for the input field */
+ input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styling for the button */
+.container {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container:hover {
+  background-color: #0056b3;
+}
+
+.container:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Container for each user */
+.user-container {
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for user details */
+.users {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+.user {
+  font-weight: bold;
+}
+
+.exuses-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Cera Pro', sans-serif;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Header for the excuses component */
+.exuses-container h1 {
+    text-align: center;
+}
+
+/* Styling for the buttons */
+.exuses-container button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.exuses-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the excuse text */
+.excuse-text {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+nav{
+display: flex;
+justify-content: end;
+align-items: end;
+}
+nav button{
+align-content: center;
+width: 100%;
+border-radius: 15px ;
+border: none;
+}
