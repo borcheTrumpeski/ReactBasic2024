@@ -1,6 +1,8 @@
 import './App.css';
+import Posts from './components/Posts';
+// import ProductsComponent from './components/ProductsComponent';
 // import AgifyComponent from './components/Agify';
-import CatFactComponent from './components/CatFactComponent';
+// import CatFactComponent from './components/CatFactComponent';
 // import ExcuseComponent from './components/ExcuseComponent';
 // import SearchUsers from './components/SearchUsers';
 // import DataFetchingComponent from './components/DataFetchingComponent ';
@@ -67,7 +69,9 @@ function App() {
         {/* <SearchUsers /> */}
         {/* <ExcuseComponent /> */}
         {/* <AgifyComponent /> */}
-        <CatFactComponent />
+        {/* <CatFactComponent /> */}
+        {/* <ProductsComponent /> */}
+        <Posts />
       </header>
     </div>
   );

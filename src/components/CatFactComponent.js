@@ -17,7 +17,7 @@ const CatFactComponent = () => {
     return (
         <div>
             <button onClick={handleButtonClick}>Get Cat Fact</button>
-            {fact && <p>{fact}</p>}
+            <p>{fact}</p>
         </div>
     );
 };
