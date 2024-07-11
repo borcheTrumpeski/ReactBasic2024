@@ -2,16 +2,59 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import AgifyComponent from './components/Agify';
+import CatFactComponent from './components/CatFactComponent';
+import MojaPrvaLjubov from './components/MojaPrvaLjubov';
+import Posts from './components/Posts';
+import ProductsComponent from './components/ProductsComponent';
+import ExcuseComponent from './components/ExcuseComponent';
+import SearchUsers from './components/SearchUsers';
+import DataFetchingComponent from './components/DataFetchingComponent ';
+import SeasonRadioButtons from './components/SeasonRadioButtons';
+import UserFetchingComponent from './components/UserFetchingComponent';
+import Counter from './components/Counter';
+import TableUsers from './components/TableUsers';
+import Todo from './components/Todo';
+import UserCard from './components/UserCard';
+import Users from './components/Users';
+import Error from './components/Error';
+import Product from './components/Product';
+
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <Error />,
+    children: [
+      { path: "/", element: <MojaPrvaLjubov /> },
+      { path: "agify", element: <AgifyComponent /> },
+      { path: "catfact", element: <CatFactComponent /> },
+      { path: "post", element: <Posts /> },
+      { path: "products", element: <ProductsComponent /> },
+      { path: "excuse", element: <ExcuseComponent /> },
+      { path: "searchusers", element: <SearchUsers /> },
+      { path: "datafetching", element: <DataFetchingComponent /> },
+      { path: "seasonradiobuttons", element: <SeasonRadioButtons /> },
+      { path: "userfetching", element: <UserFetchingComponent /> },
+      { path: "counter", element: <Counter /> },
+      { path: "tableusers", element: <TableUsers /> },
+      { path: "todo", element: <Todo /> },
+      { path: "usercard", element: <UserCard /> },
+      { path: "users", element: <Users /> },
+      { path: "product/:id", element: <Product /> },
+    ],
+  },
+
+]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+    <RouterProvider router={router} />
+  </React.StrictMode>,
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+);

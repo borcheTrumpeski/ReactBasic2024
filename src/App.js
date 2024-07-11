@@ -1,21 +1,10 @@
 import './App.css';
-import Posts from './components/Posts';
-// import ProductsComponent from './components/ProductsComponent';
-// import AgifyComponent from './components/Agify';
-// import CatFactComponent from './components/CatFactComponent';
-// import ExcuseComponent from './components/ExcuseComponent';
-// import SearchUsers from './components/SearchUsers';
-// import DataFetchingComponent from './components/DataFetchingComponent ';
-// import SeasonRadioButtons from './components/SeasonRadioButtons';
-// import UserFetchingComponent from './components/UserFetchingComponent';
-// import Counter from './components/Counter';
-// import TableUsers from './components/TableUsers';
-// import Todo from './components/Todo';
+import React from 'react';
+import { Outlet } from 'react-router-dom';
+import Navbar from './components/Navbar';
+
 // import React, { useState } from 'react';
 
-// import UserCard from './components/UserCard';
-// import MojaPrvaLjubov, { title } from './components/MojaPrvaLjubov';
-// import Users from './components/Users';
 
 function App() {
   // const [isComponentVisible, setComponentVisible] = useState(false);
@@ -34,6 +23,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Navbar />
+        <Outlet />
         {/* <h1>{title}</h1>
         <p>
           Hello, {name}! You are {age} years old.
@@ -53,25 +44,10 @@ function App() {
             </div>
           ))}
         </p>
-        <MojaPrvaLjubov /> */}
-        {/* <Users /> */}
-        {/* <UserCard />
-        <TableUsers /> */}
-        {/* <Counter /> */}
         {/* <button onClick={toggleComponent}>
           {isComponentVisible ? 'Hide' : isComponentVisible === false && isComponentVisible !== null ? 'Show' : 'Press me'}
         </button>
         {isComponentVisible && <Todo />} */}
-        {/* <Todo /> */}
-        {/* <DataFetchingComponent /> */}
-        {/* <SeasonRadioButtons /> */}
-        {/* <UserFetchingComponent /> */}
-        {/* <SearchUsers /> */}
-        {/* <ExcuseComponent /> */}
-        {/* <AgifyComponent /> */}
-        {/* <CatFactComponent /> */}
-        {/* <ProductsComponent /> */}
-        <Posts />
       </header>
     </div>
   );

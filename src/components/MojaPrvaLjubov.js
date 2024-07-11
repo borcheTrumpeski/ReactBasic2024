@@ -6,12 +6,14 @@ function MojaPrvaLjubov() {
     )
 }
 
-function MojaVtoraLjubov() {
-    return (
-        <div>MojaVtoraLjubov</div>
-    )
-}
+// function MojaVtoraLjubov() {
+//     return (
+//         <div>MojaVtoraLjubov</div>
+//     )
+// }
 
-const title = "ova e title"
+// const title = "ova e title"
 
-export { MojaPrvaLjubov, MojaVtoraLjubov, title };
+export default MojaPrvaLjubov;
+
+// export { MojaPrvaLjubov, MojaVtoraLjubov, title };
