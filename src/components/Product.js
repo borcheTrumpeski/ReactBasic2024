@@ -5,6 +5,7 @@ import axios from 'axios';
 const Product = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
+    const [notFound, setNotFound] = useState(false);
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -12,13 +13,16 @@ const Product = () => {
                 const response = await axios.get(`https://dummyjson.com/products/${id}`);
                 setProduct(response.data);
             } catch (err) {
-
+                setNotFound(true);
             }
         };
 
         fetchProduct();
     }, [id]);
 
+    if (notFound) {
+        return <div>Product with id "{id}" not found</div>;
+    }
 
     return (
         <div>
@@ -30,11 +34,10 @@ const Product = () => {
                     <img src={product.thumbnail} alt={product.title} />
                 </>
             ) : (
-                <div>Product not found</div>
+                <div>Loading...</div>
             )}
         </div>
     );
-
 };
 
 export default Product;
