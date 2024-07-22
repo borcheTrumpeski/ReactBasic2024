@@ -49,6 +49,9 @@ function Navbar() {
                 <li>
                     <Link to="/users">users</Link>
                 </li>
+                <li>
+                    <Link to="/getallusers">getallusers</Link>
+                </li>
             </ul>
         </nav>
     );

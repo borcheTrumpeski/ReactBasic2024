@@ -20,7 +20,8 @@ import UserCard from './components/UserCard';
 import Users from './components/Users';
 import Error from './components/Error';
 import Product from './components/Product';
-
+import GetAllUsers from './components/GetAllUsers';
+import GetUserById from './components/GetUserById';
 
 
 const router = createBrowserRouter([
@@ -45,16 +46,20 @@ const router = createBrowserRouter([
       { path: "usercard", element: <UserCard /> },
       { path: "users", element: <Users /> },
       { path: "product/:id", element: <Product /> },
+      {
+        path: "getallusers",
+        element: <GetAllUsers />,
+        children: [
+          { path: ":id", element: <GetUserById /> },
+        ],
+      },
     ],
   },
-
 ]);
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>,
-
 );
